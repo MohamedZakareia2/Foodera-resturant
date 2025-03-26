@@ -1,0 +1,192 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container-nav {
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.104);
+    z-index: 1000;
+}
+
+.logo {
+    width: auto;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 1.875rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #A82D49;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+.nav-num {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    border: 0.1875rem solid var(--primary-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    -ms-border-radius: 1.25rem;
+    -o-border-radius: 1.25rem;
+}
+
+.nav-num:hover {
+    background-color: transparent;
+    color: var(--primary-color) !important;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #A82D49;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    -moz-transform: rotate(45deg) translate(5px, 5px);
+    -ms-transform: rotate(45deg) translate(5px, 5px);
+    -o-transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    -webkit-transform: rotate(-45deg) translate(7px, -6px);
+    -moz-transform: rotate(-45deg) translate(7px, -6px);
+    -ms-transform: rotate(-45deg) translate(7px, -6px);
+    -o-transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-nav {
+        height: 5.5rem;
+        padding: 0 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 5.5rem;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 5.5rem);
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem 0;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .logo {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-nav {
+        height: 4.5rem;
+    }
+    
+    .nav-links {
+        top: 4.5rem;
+        height: calc(100vh - 4.5rem);
+    }
+    
+    .logo {
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,40 @@
+.App{
+    overflow: hidden;
+}
+
+
+:root{
+    --primary-color: #A82D49;
+    --secondary-color: #43121D;
+    --paragraph-color: #555555;
+    --white-text: #fff;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .container-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .container-nav li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    color: #A82D49 ;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+  
+  .container-nav li:hover {
+    color: #ff6b6b;   }
+

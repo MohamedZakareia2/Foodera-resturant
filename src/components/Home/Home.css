@@ -1,0 +1,809 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-num{
+    width: 100%;
+    height: 10.625rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.num{
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.num h2{
+    color: #fff;   
+    margin: 0;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.num h6{
+    color: #fff;
+    margin: 0;
+    margin-left: 1.5625rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 600;
+    letter-spacing: 0.09375rem;
+}
+
+/*css to the pride section  */
+
+.pride{
+    margin-top: 6.25rem;
+    width: 100%;
+    height: 37.5rem;
+}
+
+.container-pride{
+    margin-left: 10%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10%;
+}
+
+.left-pride{
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.left-pride img{
+    margin: 0;
+    justify-self: center;
+    min-width: 60%;
+    max-width: 40.625rem;
+    max-height: 26.875rem;
+    min-height: auto;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    -ms-border-radius: 1.25rem;
+    -o-border-radius: 1.25rem;
+}
+
+.right-pride{
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;   
+    gap: 1.25rem;
+}
+
+.right-pride h2{
+    font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+    text-align: left;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    letter-spacing: 0.0625rem;
+    margin: 0;
+}
+
+.right-pride p{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-align: left;
+    margin: 0;
+}
+
+.right-pride button{
+    width: 9.375rem;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    padding: 0.625rem 1.25rem;
+    border: 0.0625rem solid var(--primary-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 500;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.500s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.right-pride button:hover{
+        background-color: white;
+}
+
+.right-pride button a{
+    color: var(--white-text) !important;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    display: block;
+}
+
+.right-pride button a:hover{
+    color: var(--primary-color) !important;
+}
+
+    /*responsive for pride section */
+
+
+@media (max-width: 768px) {
+    .container-ing,.container-pride {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .container-ing .left-side,.left-pride, .right-pride {
+        width: 90%;
+        text-align: center;
+    }
+
+    .left-pride img {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 25rem;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .num h2 {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    .num h6 {
+        font-size: clamp(0.625rem, 2vw, 0.75rem);
+    }
+
+    .right-pride h2 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+
+    .right-pride p {
+        font-size: clamp(0.625rem, 2vw, 0.75rem);
+    }
+}
+
+
+
+
+
+/*css to the ingredients section  */
+
+
+
+.ingredients{
+    margin-top: 50px;
+    max-width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+.container-ing{
+    margin: 0 auto;
+    width: 75%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.container-ing .left-side{
+    flex: 1;
+    min-width: 300px;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;   
+    gap: 1.25rem;
+}
+
+.container-ing .left-side h2{
+    font-size: clamp(1.5rem, 2.1vw, 1.875rem);
+    text-align: left;
+    color: var(--secondary-color);
+    line-height: 50px;
+    letter-spacing: 0.0625rem;
+    margin: 10px 0;
+    width: 70%;
+    align-self: flex-start;
+}
+
+
+.container-ing .left-side p{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-align: left;
+    margin: 0;
+    width: 60%;
+    color: var(--paragraph-color);
+    align-self: flex-start;
+}
+
+
+.container-ing .left-side ul{
+    align-self: flex-start;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-ing .left-side ul li{
+    color: var(--paragraph-color);
+    font-size: 14px;
+    
+}
+
+
+.container-ing .right-side{
+    flex: 1;
+    min-width: 300px;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.container-ing .right-side img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    }
+
+
+.ingredients button{
+    align-self: flex-start;
+    width: 9.375rem;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    padding: 0.625rem 1.25rem;
+    border: 0.0625rem solid var(--primary-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 500;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.500s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ingredients button:hover{
+    background-color: white;
+}
+
+.ingredients button a{
+    color: var(--white-text) !important;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    display: block;
+    text-decoration: none;
+}
+
+.ingredients button a:hover{
+ 
+    color: var(--primary-color) !important;
+}
+
+/*responsive handling for ingredient section*/
+
+
+
+@media (max-width: 768px) {
+
+    .container-ing, .container-pride {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        width: 90%;
+        gap: 30px;
+    }
+
+
+    .container-ing .left-side h2,
+    .container-ing .left-side p,
+    .container-ing .left-side ul,
+    .container-ing .left-side button {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+    }    
+
+    .container-ing .left-side, .left-pride, .right-pride {
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .container-ing h2, .container-ing p, .container-ing button {
+        text-align: center;
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .container-ing .right-side img {
+        max-width: 100%; /* Better control on mobile */
+        margin: 0 auto; /* Center the image */
+        max-height: 300px;
+    }
+
+    .left-side, .left-pride img {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .container-ing {
+        width: 95%;
+    }
+    
+    .container-ing .right-side img {
+        max-width: 100%;
+    }
+
+
+
+    .num h2 {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    .num h6 {
+        font-size: clamp(0.625rem, 2vw, 0.75rem);
+    }
+
+    .right-pride h2, .container-ing h2 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+
+    .right-pride p, .container-ing p {
+        font-size: clamp(0.625rem, 2vw, 0.75rem);
+    }
+
+    .container-ing button {
+        width: 100%;
+        font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+}
+
+
+
+/*css for stomack section*/
+
+.stomack{
+    margin: 50px 0;
+    background: url(../../Assets/4.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        
+}
+
+
+
+.stomack h2{
+    font-size: clamp(1.5rem, 2.1vw, 1.875rem);
+    text-align: center;
+    color: var(--primary-color);
+    letter-spacing: 0.0625rem;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 70%;
+    align-self: center;
+}
+
+.stomack p{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-align: center;
+    margin: 0;
+    width: 60%;
+    color: var(--paragraph-color);
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+
+.stomack a{
+    color: var(--secondary-color) !important;
+    cursor: pointer;
+    font-weight: 400;    
+}
+
+
+.stomack a:hover{
+    color: var(--primary-color) !important;
+} 
+
+
+/*css for blog section*/
+.blogs{
+    margin-top: 50px;
+    padding: 25px 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+
+.container-blog{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+
+.container-blog h2{
+    font-size: clamp(1.5rem, 2.1vw, 1.875rem);
+    text-align: center;
+    color: var(--secondary-color);
+    letter-spacing: 0.0625rem;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 70%;
+    align-self: center;   
+}
+
+.container-blog p{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-align: center;
+    margin: 0;
+    width: 60%;
+    color: var(--paragraph-color);
+    align-self: center;
+}
+
+
+.blog-d{
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.blog-d img{
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.content-blog{
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.content-blog h5{
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.content-blog span{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-align: center;
+    color: var(--paragraph-color);
+    margin-bottom: 10px;
+}
+
+
+.content-blog h6{
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.content-blog button{
+    width: 9.375rem;
+    background-color: var(--primary-color);
+    color: var(--white-text) !important;
+    padding: 0.625rem 1.25rem;
+    border: 0.0625rem solid var(--primary-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 500;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.500s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.content-blog button:hover{
+    background-color: white ;
+}
+
+.content-blog button a{
+    color: var(--white-text) !important;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    display: block;
+    text-decoration: none;
+}
+
+.content-blog button a:hover{
+ 
+    color: var(--primary-color) !important;
+}
+
+
+
+
+/* css for questoins section*/
+
+.Questions{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.Questions h2{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+
+.Questions .r-p,.Questions .l-p{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.Questions .l-p .caption,.Questions .r-p .caption{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.Questions .r-p .caption h5,.Questions .l-p .caption h5{
+   text-align: left;
+   font-size: 20px;
+   font-weight: 500;
+   color: rgb(76, 75, 75);
+
+}
+
+.Questions .r-p .caption p,.Questions .l-p .caption p{
+    width: 100%;
+}
+
+
+/* css for baking section */
+
+/**/
+
+.backing{
+    margin: 100px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../Assets/footer.jpg");
+    background-size: cover;
+    object-fit: contain;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    height: 10.625rem ;
+    overflow: hidden;
+}
+
+
+.container-bake{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 15%;  
+}
+
+.container-bake h3{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.container-bake button{
+    width: 9.375rem;
+    background-color: var(--primary-color);
+    color: var(--white-text) !important;
+    padding: 0.625rem 1.25rem;
+    border: 0.0925rem solid var(--primary-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 500;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.500s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+.container-bake button:hover{
+    background-color: transparent ;
+}
+
+.container-bake button a{
+    color: var(--white-text) !important;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    display: block;
+    text-decoration: none;
+}
+
+.container-bake button a:hover{
+ 
+    color: var(--primary-color) !important;
+}
+
+
+/*css for prefooter*/
+.prefooter{
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+
+
+
+.prefooter h2{
+    font-size: 34px;
+    text-align: center;
+}
+
+
+.prefooter p{
+    text-align: center;
+}
+
+
+
+.prefooter button{ 
+    
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.625rem 2.2rem;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 500;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.500s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.prefooter button:hover{
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+
+
+
+
+
+.prefooter input{
+    height: 50px;
+    max-width: 400px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.prefooter .sub{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* css for footer */
+
+footer{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    gap: 30px;
+    flex-direction: column;
+}
+
+
+footer .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    gap: 30px;
+}
+
+footer a{
+    color: #fff !important;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+footer a:hover{
+    text-decoration: underline !important;
+}
+
+
+footer .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .icons .fab{
+    font-size: 20px;
+}
+
+
+footer span{
+    color: #fff;
+    font-size: 12px;
+}
